@@ -3,9 +3,9 @@ package modules;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import page_objects.GitHubSearchPage;
+import utils.BrowserFactory;
 
 public class Hooks {
     //TODO: Configure test run before and after
@@ -14,8 +14,7 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = BrowserFactory.getFactoryDriver();
         PageFactory.initElements(driver, gitHubSearchPage);
     }
 
