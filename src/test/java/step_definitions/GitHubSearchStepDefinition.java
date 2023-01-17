@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import page_objects.GitHubSearchPage;
+import page_objects.GitHubHomePage;
 
 import static modules.Hooks.driver;
 
@@ -16,7 +16,7 @@ public class GitHubSearchStepDefinition {
 
     @When("I lookup the word {string}")
     public void iLookupTheWord(String arg0) {
-    GitHubSearchPage.searchFor(arg0);
+    GitHubHomePage.searchFor(arg0);
     }
 
     @Then("search results display the word {string}")

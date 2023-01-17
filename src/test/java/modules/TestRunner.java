@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         plugin = {"json", "json:target/json/results.json"},
-        glue = {"modules", "step_definitions"},
-        tags = "@searchOnGitHub and not @test1"
+        glue = {"modules", "step_definitions"}
 )
 public class TestRunner {
 }
